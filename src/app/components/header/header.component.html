@@ -1,0 +1,217 @@
+<!-- <mat-toolbar class="fixed-top z-3 navbar navbar-expand-lg  " [ngClass]="themeService.themeSignal()">
+
+  <div class="theme-control">
+    <mat-slide-toggle [checked]="themeService.themeSignal() === 'dark'" (click)="toggleTheme()">
+    </mat-slide-toggle>
+    <button mat-icon-button>
+      <mat-icon *ngIf="themeService.themeSignal() === 'dark'">bedtime</mat-icon>
+      <mat-icon *ngIf="themeService.themeSignal() === 'light'">brightness_5</mat-icon>
+    </button>
+  </div>
+
+</mat-toolbar>
+<hr> -->
+
+
+<nav class="navbar navbar-expand-sm fixed-top z-3 shadow" [ngClass]="themeService.themeSignal()">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <h4 class="text-secondary"> omar</h4>
+    </a>
+    <button mat-raised-button color="warn" class="navbar-toggler  btn btn-sm   shadow" type="button"
+      data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon  rounded-0 btn btn-sm mx-0 px-1" color="warn"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item py-1">
+          <button mat-raised-button>Home</button>
+        </li>
+        <li class="nav-item px-sm-1 px-0 py-1">
+          <button mat-raised-button color="primary">Link</button>
+        </li>
+        <li class="nav-item dropdown py-1">
+          <button mat-raised-button color="accent" class="dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Dropdown
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownId">
+            <li><a class="dropdown-item" href="#">Action 1</a></li>
+            <li><a class="dropdown-item" href="#">Action 2</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <button mat-mini-fab color="accent" (click)="toggleTheme()">
+          <mat-icon *ngIf="themeService.themeSignal() === 'dark'">bedtime</mat-icon>
+          <mat-icon *ngIf="themeService.themeSignal() === 'light'">brightness_5</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<p class="mt-1">header works!</p>
+<p>header works!</p>
+<mat-card class="rounded-0 p-2">
+
+
+  <section>
+    <div class="example-label text-light">Basic</div>
+    <div class="example-button-row">
+      <button mat-button>Basic</button>
+      <button mat-button color="primary">Primary</button>
+      <button mat-button color="accent">Accent</button>
+      <button mat-button color="warn">Warn</button>
+      <button mat-button disabled>Disabled</button>
+      <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">Raised</div>
+    <div class="example-button-row">
+      <button mat-raised-button>Basic</button>
+      <button mat-raised-button color="primary">Primary</button>
+      <button mat-raised-button color="accent">Accent</button>
+      <button mat-raised-button color="warn">Warn</button>
+      <button mat-raised-button disabled>Disabled</button>
+      <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">Stroked</div>
+    <div class="example-button-row">
+      <button mat-stroked-button>Basic</button>
+      <button mat-stroked-button color="primary">Primary</button>
+      <button mat-stroked-button color="accent">Accent</button>
+      <button mat-stroked-button color="warn">Warn</button>
+      <button mat-stroked-button disabled>Disabled</button>
+      <a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">Flat</div>
+    <div class="example-button-row">
+      <button mat-flat-button>Basic</button>
+      <button mat-flat-button color="primary">Primary</button>
+      <button mat-flat-button color="accent">Accent</button>
+      <button mat-flat-button color="warn">Warn</button>
+      <button mat-flat-button disabled>Disabled</button>
+      <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">Icon</div>
+    <div class="example-button-row">
+      <div class="example-flex-container">
+        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+          <mat-icon>home</mat-icon>
+        </button>
+        <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
+          <mat-icon>open_in_new</mat-icon>
+        </button>
+      </div>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">FAB</div>
+    <div class="example-button-row">
+      <div class="example-flex-container">
+        <div class="example-button-container">
+          <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container">
+          <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+            <mat-icon>bookmark</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container">
+          <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+            <mat-icon>home</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container">
+          <button mat-fab disabled aria-label="Example icon button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">Mini FAB</div>
+    <div class="example-button-row">
+      <div class="example-flex-container">
+        <div class="example-button-container">
+          <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container">
+          <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon">
+            <mat-icon>plus_one</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container">
+          <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+            <mat-icon>filter_list</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container">
+          <button mat-mini-fab disabled aria-label="Example icon button with a home icon">
+            <mat-icon>home</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+</mat-card>
+<hr>
+<h1> </h1>
+
+
+
+<mat-card class="rounded-0 container-xxl py-5">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    @for (item of users; track $index) {
+
+    <div class="col position-relative text-center ">
+      <mat-card class="rounded-3 px-1 py-1 light shadow border-white border text-center" style="height: 18rem;">
+
+        <img ngSrc="{{item.image}}" class="  text-center  overflow-hidden mx-auto " loading="eager" width="200"
+          height="200" ngSrcset="100w, 200w, 300w" sizes="50vw" alt="  placeholder ">
+
+        <p class=" mt-2">title-{{ item.title }}</p>
+
+      </mat-card>
+
+
+    </div>
+
+
+
+    }
+
+  </div>
+</mat-card>
